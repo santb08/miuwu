@@ -66,7 +66,7 @@
     <div class="container">
         <div class="box">
             <h1>Quieres ser mi uwu?</h1>
-            <p><a>Shi</a></p>
+            <p><a onclick="onClickYes()">Shi</a></p>
             <p><a class="noselect" type="no">No</a></p>
         </div>
     </div>
@@ -76,13 +76,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.wavify.js"></script>
     <script>
+        let color = '#0bd';
+
         $('#wave').wavify({
-            height: 60,
+            height: 200,
             bones: 3,
-            amplitude: 40,
+            amplitude: 100,
             color: '#0bd',
             speed: .25
         });
+
+        const onClickYes = () => {
+            alert("yay uwu");
+
+            $('#wave').wavify({
+                height: 200,
+                bones: 3,
+                amplitude: 100,
+                color: '#FE5D26',
+                speed: .25
+            });
+
+            setTimeout(() => window.open('https://youtu.be/BFlG5sD540k'), 5000);
+        }
     </script>
 </body>
 </html>
